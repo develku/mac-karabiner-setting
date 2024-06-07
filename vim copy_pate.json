@@ -1,0 +1,37 @@
+{
+  "description": "vim Copy and Paste",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "y",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "c",
+          "modifiers": ["left_command"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "p",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "v",
+          "modifiers": ["left_command"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

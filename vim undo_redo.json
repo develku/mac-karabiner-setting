@@ -1,0 +1,21 @@
+{
+  "description": "vim undo and redo",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "u",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "z",
+          "modifiers": ["left_command"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

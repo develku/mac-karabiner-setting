@@ -1,0 +1,20 @@
+{
+  "description": "Map fn + [ to ESC",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "open_bracket",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "escape"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

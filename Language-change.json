@@ -1,0 +1,21 @@
+{
+  "description": "Map right_shift + left_control to shift + control + space for language change",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "left_command",
+        "modifiers": {
+          "mandatory": ["right_shift"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "spacebar",
+          "modifiers": ["left_shift", "left_control"]
+        }
+      ]
+    }
+  ]
+}

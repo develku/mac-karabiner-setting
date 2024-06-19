@@ -1,0 +1,49 @@
+{
+  "description": "4. Vim, enter and shift+enter",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "semicolon"
+      },
+      "to": [
+        {
+          "key_code": "return_or_enter"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "return_or_enter"
+      },
+      "to": [
+        {
+          "key_code": "return_or_enter"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

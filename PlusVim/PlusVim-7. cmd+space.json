@@ -1,0 +1,28 @@
+{
+  "description": "7. Vim, Command-space",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "spacebar"
+      },
+      "to": [
+        {
+          "key_code": "spacebar",
+          "modifiers": ["left_command"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

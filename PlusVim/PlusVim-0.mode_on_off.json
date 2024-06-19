@@ -1,0 +1,79 @@
+{
+  "description": "0. (caps_lock)vim mode on & off,\n 1. press and hold fn to enable vim mode,\n 2. press escape to disable vim mode\n 3. esc to exit vim mode back up",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_unless",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "caps_lock"
+      },
+      "parameters": {
+        // "basic.to_if_alone_threshold_milliseconds": 0,
+        "basic.to_if_held_down_threshold_milliseconds": 50
+      },
+      "to_after_key_up": [
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        }
+      ],
+      "to_if_held_down": [
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 1
+          }
+        } //,
+        // {
+        //   "set_notification_message": {
+        //     "id": "vim_mode_plus_enabled",
+        //     "text": "NORMAL - Vim Mode Enabled"
+        //   }
+        // }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "escape"
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

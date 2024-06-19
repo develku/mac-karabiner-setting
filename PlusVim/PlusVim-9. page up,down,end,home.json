@@ -1,5 +1,5 @@
 {
-  "description": "9. vim, page: down, page up, home, end",
+  "description": "9. vim, page: down, up, home, end",
   "manipulators": [
     {
       "conditions": [

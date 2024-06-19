@@ -1,0 +1,35 @@
+{
+  "description": "Map fn + backspace to delete and fn + \\ to backspace",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "delete_or_backspace",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "delete_forward"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "backslash",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "delete_or_backspace"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "description": "vim enter & shift enter to move to next/previous line",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "semicolon",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "return_or_enter"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "return_or_enter",
+        "modifiers": {
+          "mandatory": ["fn"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "return_or_enter",
+          "modifiers": ["left_shift"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

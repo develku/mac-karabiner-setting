@@ -65,13 +65,13 @@
             "name": "vim_mode",
             "value": 0
           }
-        },
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": ""
-          }
-        }
+        } //,
+        // {
+        //   "set_notification_message": {
+        //     "id": "vim_mode_plus_enabled",
+        //     "text": ""
+        //   }
+        // }
       ],
       "type": "basic"
     }

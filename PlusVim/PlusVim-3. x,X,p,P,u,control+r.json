@@ -110,7 +110,10 @@
         }
       ],
       "from": {
-        "key_code": "u"
+        "key_code": "u",
+        "modifiers": {
+          "optional": ["shift"]
+        }
       },
       "to": [
         {

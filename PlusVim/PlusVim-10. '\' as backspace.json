@@ -36,7 +36,11 @@
         }
       ],
       "from": {
-        "key_code": "delete_or_backspace"
+        "key_code": "delete_or_backspace",
+        "modifiers": {
+          "mandatory": [],
+          "optional": ["any"]
+        }
       },
       "to": [
         {

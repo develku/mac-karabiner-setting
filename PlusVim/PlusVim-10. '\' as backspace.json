@@ -14,7 +14,11 @@
         }
       ],
       "from": {
-        "key_code": "backslash"
+        "key_code": "backslash",
+        "modifiers": {
+          "mandatory": [],
+          "optional": ["any"]
+        }
       },
       "to": [
         {
@@ -32,7 +36,7 @@
         {
           "name": "vim_mode",
           "type": "variable_if",
-          "value": 1
+          "value": 0
         }
       ],
       "from": {

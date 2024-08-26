@@ -1,5 +1,5 @@
 {
-  "description": "10. 1 - working '\\' as a backspace in normal mode, 2 - working backspace as a '`'",
+  "description": "10. 1 - working '\\' as a backspace in normal mode, 2 - working backspace as a '`', 3 - working '/' as a '\\', 4 - working shift+ '/' as a '\\'",
   "manipulators": [
     {
       "conditions": [
@@ -49,6 +49,59 @@
       "to": [
         {
           "key_code": "grave_accent_and_tilde"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "slash",
+        "modifiers": {
+          "mandatory": [],
+          "optional": []
+        }
+      },
+      "to": [
+        {
+          "key_code": "backslash"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "slash",
+        "modifiers": {
+          "mandatory": [],
+          "optional": ["left_shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "backslash",
+          "modifiers": ["left_shift"]
         }
       ],
       "type": "basic"

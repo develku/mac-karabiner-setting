@@ -1,0 +1,120 @@
+{
+  "description": "Layer2-0. Long press 'n' key turn on NUMBER mode, press 'esc' or 'ctrl+[' to turn off",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 0
+        },
+        {
+          "name": "num_mode",
+          "type": "variable_unless",
+          "value": 1
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 0
+        }
+      ],
+      "from": {
+        "key_code": "n"
+      },
+      "parameters": {
+        "basic.to_if_alone_threshold_milliseconds": 5,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to_if_alone": [
+        {
+          "halt": true,
+          "key_code": "n"
+        }
+      ],
+      "to_if_held_down": [
+        {
+          "set_variable": {
+            "name": "num_mode",
+            "value": 1
+          }
+        },
+        {
+          "halt": true,
+          "set_notification_message": {
+            "id": "Number Mode Enabled",
+            "text": "NUMBER - Vim Mode Enabled"
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "num_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "escape"
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "num_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "Number Mode Enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "num_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "open_bracket",
+        "modifiers": { "mandatory": ["control"] }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "num_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "Number Mode Enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

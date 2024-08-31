@@ -1,0 +1,217 @@
+{
+  "description": "Layer3-1. Mouse Keys (w,a,s,d)+shift slower",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "w"
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "y": -1536,
+            "speed_multiplier": 1.4
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "w",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "y": -1536,
+            "speed_multiplier": 1
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "a"
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "x": -1536,
+            "speed_multiplier": 1.4
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "a",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "x": -1536,
+            "speed_multiplier": 1
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "s"
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "y": 1536,
+            "speed_multiplier": 1.4
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "s",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "y": 1536,
+            "speed_multiplier": 1
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "d"
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "x": 1536,
+            "speed_multiplier": 1.4
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "d",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "x": 1536,
+            "speed_multiplier": 1
+          }
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

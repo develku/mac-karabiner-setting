@@ -1,5 +1,5 @@
 {
-  "description": "8. vim, yank(yy,yw,yb,y0,y^,y$,ygg,yG,y{,y} )",
+  "description": "1. h,j,k,l (+ control/option/command/shift),w,b,0,^,$,gg,G,{,}",
   "manipulators": [
     {
       "conditions": [
@@ -11,81 +11,17 @@
           "name": "vim_mode",
           "type": "variable_if",
           "value": 1
-        },
-        {
-          "name": "y_pressed",
-          "type": "variable_unless",
-          "value": 1
         }
       ],
       "from": {
-        "key_code": "y"
-      },
-      "parameters": {
-        "basic.to_delayed_action_delay_milliseconds": 500
+        "key_code": "h",
+        "modifiers": {
+          "optional": ["control", "option", "command", "shift"]
+        }
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 1
-          }
-        }
-      ],
-      "to_delayed_action": {
-        "to_if_invoked": [
-          {
-            "set_variable": {
-              "name": "y_pressed",
-              "value": 0
-            }
-          }
-        ]
-      },
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "y_pressed",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "y"
-      },
-      "to": [
-        {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
-          "key_code": "left_arrow",
-          "modifiers": ["left_command"]
-        },
-        {
-          "key_code": "left_arrow",
-          "modifiers": ["left_command"]
-        },
-        {
-          "key_code": "right_arrow",
-          "modifiers": ["left_command", "left_shift"]
-        },
-        {
-          "key_code": "c",
-          "modifiers": ["left_command"]
+          "key_code": "left_arrow"
         }
       ],
       "type": "basic"
@@ -100,9 +36,79 @@
           "name": "vim_mode",
           "type": "variable_if",
           "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "j",
+        "modifiers": {
+          "optional": ["control", "option", "command", "shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "down_arrow"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
         },
         {
-          "name": "y_pressed",
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "k",
+        "modifiers": {
+          "optional": ["control", "option", "command", "shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "up_arrow"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "l",
+        "modifiers": {
+          "optional": ["control", "option", "command", "shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "right_arrow"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -112,18 +118,8 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
           "key_code": "right_arrow",
-          "modifiers": ["left_shift", "left_alt"]
-        },
-        {
-          "key_code": "c",
-          "modifiers": ["left_command"]
+          "modifiers": ["left_alt"]
         }
       ],
       "type": "basic"
@@ -136,11 +132,6 @@
         },
         {
           "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "y_pressed",
           "type": "variable_if",
           "value": 1
         }
@@ -150,18 +141,8 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
           "key_code": "left_arrow",
-          "modifiers": ["left_shift", "left_alt"]
-        },
-        {
-          "key_code": "c",
-          "modifiers": ["left_command"]
+          "modifiers": ["left_alt"]
         }
       ],
       "type": "basic"
@@ -174,11 +155,6 @@
         },
         {
           "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "y_pressed",
           "type": "variable_if",
           "value": 1
         }
@@ -188,21 +164,11 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
+          "key_code": "left_arrow",
+          "modifiers": ["left_command"]
         },
         {
           "key_code": "left_arrow",
-          "modifiers": ["left_command", "left_shift"]
-        },
-        {
-          "key_code": "left_arrow",
-          "modifiers": ["left_command", "left_shift"]
-        },
-        {
-          "key_code": "c",
           "modifiers": ["left_command"]
         }
       ],
@@ -216,11 +182,6 @@
         },
         {
           "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "y_pressed",
           "type": "variable_if",
           "value": 1
         }
@@ -233,17 +194,7 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
           "key_code": "left_arrow",
-          "modifiers": ["left_command", "left_shift"]
-        },
-        {
-          "key_code": "c",
           "modifiers": ["left_command"]
         }
       ],
@@ -257,11 +208,6 @@
         },
         {
           "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "y_pressed",
           "type": "variable_if",
           "value": 1
         }
@@ -274,17 +220,7 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
           "key_code": "right_arrow",
-          "modifiers": ["left_command", "left_shift"]
-        },
-        {
-          "key_code": "c",
           "modifiers": ["left_command"]
         }
       ],
@@ -302,12 +238,7 @@
           "value": 1
         },
         {
-          "name": "y_pressed",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "yg_pressed",
+          "name": "g_pressed",
           "type": "variable_unless",
           "value": 1
         }
@@ -321,13 +252,7 @@
       "to": [
         {
           "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
-          "set_variable": {
-            "name": "yg_pressed",
+            "name": "g_pressed",
             "value": 1
           }
         }
@@ -336,7 +261,7 @@
         "to_if_invoked": [
           {
             "set_variable": {
-              "name": "yg_pressed",
+              "name": "g_pressed",
               "value": 0
             }
           }
@@ -356,7 +281,7 @@
           "value": 1
         },
         {
-          "name": "yg_pressed",
+          "name": "g_pressed",
           "type": "variable_if",
           "value": 1
         }
@@ -366,18 +291,14 @@
       },
       "to": [
         {
+          "key_code": "up_arrow",
+          "modifiers": ["left_command"]
+        },
+        {
           "set_variable": {
-            "name": "yg_pressed",
+            "name": "g_pressed",
             "value": 0
           }
-        },
-        {
-          "key_code": "up_arrow",
-          "modifiers": ["left_shift", "left_command"]
-        },
-        {
-          "key_code": "c",
-          "modifiers": ["left_command"]
         }
       ],
       "type": "basic"
@@ -390,11 +311,6 @@
         },
         {
           "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "y_pressed",
           "type": "variable_if",
           "value": 1
         }
@@ -407,17 +323,7 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
           "key_code": "down_arrow",
-          "modifiers": ["left_shift", "left_command"]
-        },
-        {
-          "key_code": "c",
           "modifiers": ["left_command"]
         }
       ],
@@ -431,11 +337,6 @@
         },
         {
           "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        },
-        {
-          "name": "y_pressed",
           "type": "variable_if",
           "value": 1
         }
@@ -448,18 +349,8 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
           "key_code": "a",
-          "modifiers": ["left_control", "left_shift"]
-        },
-        {
-          "key_code": "c",
-          "modifiers": ["left_command"]
+          "modifiers": ["left_control"]
         }
       ],
       "type": "basic"
@@ -474,11 +365,6 @@
           "name": "vim_mode",
           "type": "variable_if",
           "value": 1
-        },
-        {
-          "name": "y_pressed",
-          "type": "variable_if",
-          "value": 1
         }
       ],
       "from": {
@@ -489,18 +375,8 @@
       },
       "to": [
         {
-          "set_variable": {
-            "name": "y_pressed",
-            "value": 0
-          }
-        },
-        {
           "key_code": "e",
-          "modifiers": ["left_control", "left_shift"]
-        },
-        {
-          "key_code": "c",
-          "modifiers": ["left_command"]
+          "modifiers": ["left_control"]
         }
       ],
       "type": "basic"

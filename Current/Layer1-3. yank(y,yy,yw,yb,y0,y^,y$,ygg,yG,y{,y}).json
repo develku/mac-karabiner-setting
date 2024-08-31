@@ -1,5 +1,5 @@
 {
-  "description": "8. vim, yank(yy,yw,yb,y0,y^,y$,ygg,yG,y{,y} )",
+  "description": "Layer1-3. Yank: y,yy,yw,yb,y0,y^,y$,ygg,yG,y{,y}",
   "manipulators": [
     {
       "conditions": [
@@ -39,6 +39,10 @@
               "name": "y_pressed",
               "value": 0
             }
+          },
+          {
+            "key_code": "c",
+            "modifiers": ["left_command"]
           }
         ]
       },

@@ -14,11 +14,11 @@
         }
       ],
       "from": {
-        "key_code": "caps_lock"
+        "key_code": "f"
       },
       "parameters": {
-        // "basic.to_if_alone_threshold_milliseconds": 0,
-        "basic.to_if_held_down_threshold_milliseconds": 50
+        "basic.to_if_alone_threshold_milliseconds": 0,
+        "basic.to_if_held_down_threshold_milliseconds": 100
       },
       "to_after_key_up": [
         {
@@ -34,13 +34,13 @@
             "name": "vim_mode",
             "value": 1
           }
-        } //,
-        // {
-        //   "set_notification_message": {
-        //     "id": "vim_mode_plus_enabled",
-        //     "text": "NORMAL - Vim Mode Enabled"
-        //   }
-        // }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": "NORMAL - Vim Mode Enabled"
+          }
+        }
       ],
       "type": "basic"
     },
@@ -65,13 +65,13 @@
             "name": "vim_mode",
             "value": 0
           }
-        } //,
-        // {
-        //   "set_notification_message": {
-        //     "id": "vim_mode_plus_enabled",
-        //     "text": ""
-        //   }
-        // }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
       ],
       "type": "basic"
     }

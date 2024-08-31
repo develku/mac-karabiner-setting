@@ -1,0 +1,57 @@
+{
+  "description": "Custom: Language change with both shift keys.",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "right_shift",
+        "modifiers": {
+          "mandatory": ["left_shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "spacebar",
+          "modifiers": ["left_control", "left_shift"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "key_code": "left_shift",
+        "modifiers": {
+          "mandatory": ["right_shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "spacebar",
+          "modifiers": ["left_control", "left_shift"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "from": {
+        "simultaneous": [
+          {
+            "key_code": "left_shift"
+          },
+          {
+            "key_code": "right_shift"
+          }
+        ]
+      },
+      "to": [
+        {
+          "key_code": "spacebar",
+          "modifiers": ["left_control", "left_shift"]
+        }
+      ],
+      "parameters": {
+        "basic.simultaneous_threshold_milliseconds": 50
+      },
+      "type": "basic"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "description": "Layer1-6. Insert Mode: i,I,o,O,a,A",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "i"
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "i",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "e",
+          "modifiers": ["control"]
+        },
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "o"
+      },
+      "to": [
+        {
+          "key_code": "e",
+          "modifiers": ["control"]
+        },
+        {
+          "key_code": "return_or_enter"
+        },
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "o",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "a",
+          "modifiers": ["control"]
+        },
+        {
+          "key_code": "return_or_enter"
+        },
+        {
+          "key_code": "up_arrow"
+        },
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "a"
+      },
+      "to": [
+        {
+          "key_code": "right_arrow"
+        },
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "a",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "e",
+          "modifiers": ["control"]
+        },
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

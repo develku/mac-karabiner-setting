@@ -1,5 +1,5 @@
 {
-  "description": "Layer1-1.basic move: h,j,k,l,i,I,b,B,e,w,W,0,^,$,gg,ge,G,{,}",
+  "description": "Layer1-1.basic move: h,j,k,l,b,B,e,w,W,0,^,$,gg,ge,G,{,}",
   "manipulators": [
     {
       "conditions": [
@@ -101,75 +101,7 @@
       ],
       "type": "basic"
     },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "i"
-      },
-      "to": [
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 0
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": ""
-          }
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "i",
-        "modifiers": {
-          "mandatory": ["shift"]
-        }
-      },
-      "to": [
-        {
-          "key_code": "right_arrow",
-          "modifiers": ["control"]
-        },
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 0
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": ""
-          }
-        }
-      ],
-      "type": "basic"
-    },
+
     {
       "conditions": [
         {

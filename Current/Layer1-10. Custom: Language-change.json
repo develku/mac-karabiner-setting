@@ -4,9 +4,7 @@
     {
       "from": {
         "key_code": "right_shift",
-        "modifiers": {
-          "mandatory": ["left_shift"]
-        }
+        "modifiers": { "mandatory": ["left_shift"] }
       },
       "to": [
         {
@@ -19,9 +17,7 @@
     {
       "from": {
         "key_code": "left_shift",
-        "modifiers": {
-          "mandatory": ["right_shift"]
-        }
+        "modifiers": { "mandatory": ["right_shift"] }
       },
       "to": [
         {
@@ -33,24 +29,15 @@
     },
     {
       "from": {
-        "simultaneous": [
-          {
-            "key_code": "left_shift"
-          },
-          {
-            "key_code": "right_shift"
-          }
-        ]
+        "simultaneous": [{ "key_code": "left_shift" }, { "key_code": "right_shift" }]
       },
+      "parameters": { "basic.simultaneous_threshold_milliseconds": 50 },
       "to": [
         {
           "key_code": "spacebar",
           "modifiers": ["left_control", "left_shift"]
         }
       ],
-      "parameters": {
-        "basic.simultaneous_threshold_milliseconds": 50
-      },
       "type": "basic"
     }
   ]

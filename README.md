@@ -13,13 +13,13 @@ Long and short press of the function key is used to switch between layers.
 
 ### Layer 2
 
-- `n` key as number layer to start layer 2 (number pad keybindings)
+- `2` key as number layer to start layer 2 (number pad keybindings)
 - spacebar, n, m, comma, j, k, l, u, i, o as number pad keys
 - `n` : period, `h`: comma
 
 ### Layer 3
 
-- `m` key as Mouse layer to start layer 3 (mouse keybindings)
+- `3` key as Mouse layer to start layer 3 (mouse keybindings)
 - move: w, a, s, d
 - c: left click, r: right click
 - q: scroll up, e: scroll down

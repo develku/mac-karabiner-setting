@@ -1,5 +1,5 @@
 {
-  "description": "Layer3-0. Mouse Mode: 'm' key",
+  "description": "Layer3-0. Mouse Mode: '3' key",
   "manipulators": [
     {
       "conditions": [
@@ -24,7 +24,7 @@
         }
       ],
       "from": {
-        "key_code": "m"
+        "key_code": "3"
       },
       "parameters": {
         "basic.to_if_alone_threshold_milliseconds": 5,
@@ -33,7 +33,7 @@
       "to_if_alone": [
         {
           "halt": true,
-          "key_code": "m"
+          "key_code": "3"
         }
       ],
       "to_if_held_down": [

@@ -1,0 +1,143 @@
+{
+  "description": "Layer3-3. Mouse Click Actions (c:click, r:right click, q,e:vertical_wheel, z,x:horizontal_wheel)",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "h"
+      },
+      "to": [
+        {
+          "key_code": "left_arrow",
+          "modifiers": ["control", "shift", "option"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "j"
+      },
+      "to": [
+        {
+          "key_code": "down_arrow",
+          "modifiers": ["control", "shift", "option"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "k"
+      },
+      "to": [
+        {
+          "key_code": "up_arrow",
+          "modifiers": ["control", "shift", "option"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "l"
+      },
+      "to": [
+        {
+          "key_code": "right_arrow",
+          "modifiers": ["control", "shift", "option"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "semicolon"
+      },
+      "to": [
+        {
+          "key_code": "semicolon",
+          "modifiers": ["control", "shift", "option"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "quote"
+      },
+      "to": [
+        {
+          "key_code": "quote",
+          "modifiers": ["control", "shift", "option"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

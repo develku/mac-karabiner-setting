@@ -1,5 +1,5 @@
 {
-  "description": "Layer1-2. visual mode: h,j,k,l,e,b,B,w,0,^,$,gg,G,{,} + d,y,c,x",
+  "description": "Layer1-2. visual mode: v,V,h,j,k,l,e,b,B,w,0,^,$,gg,G,{,} + d,y,c,x",
   "manipulators": [
     {
       "conditions": [
@@ -22,6 +22,54 @@
         "key_code": "v"
       },
       "to": [
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_variable": {
+            "name": "visual_mode",
+            "value": 1
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "visual_mode_enabled",
+            "text": "VISUAL - Visual Mode Enabled"
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "v",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "left_arrow",
+          "modifiers": ["command"]
+        },
+        {
+          "key_code": "right_arrow",
+          "modifiers": ["command", "shift"]
+        },
         {
           "set_variable": {
             "name": "vim_mode",
@@ -76,6 +124,36 @@
             "id": "visual_mode_enabled",
             "text": ""
           }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": ["com.googlecode.iterm2", "com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "visual_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "v",
+        "modifiers": {
+          "mandatory": ["shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "left_arrow",
+          "modifiers": ["command"]
+        },
+        {
+          "key_code": "right_arrow",
+          "modifiers": ["command", "shift"]
         }
       ],
       "type": "basic"

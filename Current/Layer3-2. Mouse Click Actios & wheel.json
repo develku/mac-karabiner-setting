@@ -1,5 +1,5 @@
 {
-  "description": "Layer3-3. Mouse Click Actions (c:click, r:right click, q,e:vertical_wheel, z,x:horizontal_wheel)",
+  "description": "Layer3-3. Mouse Click Actions (c,j:click, r,k:right click,l:mac word lookup q,e:vertical_wheel, z,x:horizontal_wheel)",
   "manipulators": [
     {
       "conditions": [
@@ -36,11 +36,78 @@
         }
       ],
       "from": {
+        "key_code": "j"
+      },
+      "to": [
+        {
+          "pointing_button": "button1"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
         "key_code": "r"
       },
       "to": [
         {
           "pointing_button": "button2"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "k"
+      },
+      "to": [
+        {
+          "pointing_button": "button2"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "mouse_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "l"
+      },
+      "to": [
+        {
+          "key_code": "d",
+          "modifiers": ["control", "command"]
         }
       ],
       "type": "basic"

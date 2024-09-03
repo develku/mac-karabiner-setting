@@ -1,5 +1,5 @@
 {
-  "description": "Layer3-3. Mouse Click Actions (c:click, r:right click, q,e:vertical_wheel, z,x:horizontal_wheel)",
+  "description": "Layer3-3. Custom: Mouse Position u,i,o,p,[,]",
   "manipulators": [
     {
       "conditions": [
@@ -14,7 +14,7 @@
         }
       ],
       "from": {
-        "key_code": "h"
+        "key_code": "u"
       },
       "to": [
         {
@@ -37,7 +37,7 @@
         }
       ],
       "from": {
-        "key_code": "j"
+        "key_code": "i"
       },
       "to": [
         {
@@ -60,7 +60,7 @@
         }
       ],
       "from": {
-        "key_code": "k"
+        "key_code": "o"
       },
       "to": [
         {
@@ -83,7 +83,7 @@
         }
       ],
       "from": {
-        "key_code": "l"
+        "key_code": "p"
       },
       "to": [
         {
@@ -106,7 +106,7 @@
         }
       ],
       "from": {
-        "key_code": "semicolon"
+        "key_code": "open_bracket"
       },
       "to": [
         {
@@ -129,7 +129,7 @@
         }
       ],
       "from": {
-        "key_code": "quote"
+        "key_code": "close_bracket"
       },
       "to": [
         {

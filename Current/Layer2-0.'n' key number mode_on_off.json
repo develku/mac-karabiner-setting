@@ -7,20 +7,11 @@
           "bundle_identifiers": [],
           "type": "frontmost_application_unless"
         },
-        {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 0
-        },
+
         {
           "name": "num_mode",
           "type": "variable_unless",
           "value": 1
-        },
-        {
-          "name": "mouse_mode",
-          "type": "variable_if",
-          "value": 0
         }
       ],
       "from": {
@@ -39,8 +30,20 @@
       "to_if_held_down": [
         {
           "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_variable": {
             "name": "num_mode",
             "value": 1
+          }
+        },
+        {
+          "set_variable": {
+            "name": "mouse_mode",
+            "value": 0
           }
         },
         {
@@ -48,6 +51,18 @@
           "set_notification_message": {
             "id": "Number Mode Enabled",
             "text": "NUMBER - Vim Mode Enabled"
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "Mouse Mode Enabled",
+            "text": ""
           }
         }
       ],

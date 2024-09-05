@@ -8,16 +8,6 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 0
-        },
-        {
-          "name": "num_mode",
-          "type": "variable_if",
-          "value": 0
-        },
-        {
           "name": "mouse_mode",
           "type": "variable_unless",
           "value": 1
@@ -48,6 +38,18 @@
           "set_notification_message": {
             "id": "Mouse Mode Enabled",
             "text": "MOUSE - Vim Mode Enabled"
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "Number Mode Enabled",
+            "text": ""
           }
         }
       ],

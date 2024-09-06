@@ -1,5 +1,5 @@
 {
-  "description": "Layer1-0. Long press 'f' key turn on vim mode, press 'esc','ctrl+[',i,I to turn off",
+  "description": "Layer1-0. Long press '4' key turn on vim mode, press 'esc','ctrl+[',i,I to turn off",
   "manipulators": [
     {
       "conditions": [
@@ -14,16 +14,18 @@
         }
       ],
       "from": {
-        "key_code": "f"
+        "key_code": "4"
       },
       "parameters": {
-        "basic.to_if_alone_threshold_milliseconds": 5,
-        "basic.to_if_held_down_threshold_milliseconds": 150
+        "basic.to_if_alone_threshold_milliseconds": 1,
+        "basic.to_if_held_down_threshold_milliseconds": 180,
+        "to_delayed_action_delay_milliseconds": 500,
+        "simultaneous_threshold_milliseconds": 500
       },
       "to_if_alone": [
         {
           "halt": true,
-          "key_code": "f"
+          "key_code": "4"
         }
       ],
       "to_if_held_down": [

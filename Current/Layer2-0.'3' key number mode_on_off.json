@@ -1,5 +1,5 @@
 {
-  "description": "Layer2-0. Long press '2' key turn on NUMBER mode, press 'esc' or 'ctrl+[' to turn off",
+  "description": "Layer2-0. Long press '3' key turn on NUMBER mode, press 'esc' or 'ctrl+[' to turn off",
   "manipulators": [
     {
       "conditions": [
@@ -15,16 +15,18 @@
         }
       ],
       "from": {
-        "key_code": "2"
+        "key_code": "3"
       },
       "parameters": {
-        "basic.to_if_alone_threshold_milliseconds": 5,
-        "basic.to_if_held_down_threshold_milliseconds": 180
+        "basic.to_if_alone_threshold_milliseconds": 1,
+        "basic.to_if_held_down_threshold_milliseconds": 180,
+        "to_delayed_action_delay_milliseconds": 500,
+        "simultaneous_threshold_milliseconds": 500
       },
       "to_if_alone": [
         {
           "halt": true,
-          "key_code": "2"
+          "key_code": "3"
         }
       ],
       "to_if_held_down": [

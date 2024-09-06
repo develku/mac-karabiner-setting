@@ -130,7 +130,7 @@
       "to": [
         {
           "mouse_key": {
-            "vertical_wheel": -32
+            "vertical_wheel": -45
           }
         }
       ],
@@ -154,7 +154,7 @@
       "to": [
         {
           "mouse_key": {
-            "vertical_wheel": 32
+            "vertical_wheel": 45
           }
         }
       ],
@@ -178,7 +178,7 @@
       "to": [
         {
           "mouse_key": {
-            "horizontal_wheel": 32
+            "horizontal_wheel": 45
           }
         }
       ],
@@ -202,7 +202,7 @@
       "to": [
         {
           "mouse_key": {
-            "horizontal_wheel": 32
+            "horizontal_wheel": 45
           }
         }
       ],
@@ -226,7 +226,7 @@
       "to": [
         {
           "mouse_key": {
-            "horizontal_wheel": -32
+            "horizontal_wheel": -45
           }
         }
       ],

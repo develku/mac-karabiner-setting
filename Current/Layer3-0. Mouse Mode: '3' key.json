@@ -14,7 +14,7 @@
         }
       ],
       "from": {
-        "key_code": "3"
+        "key_code": "2"
       },
       "parameters": {
         "basic.to_if_alone_threshold_milliseconds": 1,
@@ -25,7 +25,7 @@
       "to_if_alone": [
         {
           "halt": true,
-          "key_code": "3"
+          "key_code": "2"
         }
       ],
       "to_if_held_down": [

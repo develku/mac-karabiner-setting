@@ -1,0 +1,273 @@
+{
+  "description": "Layer1-7. page: up, down, home, end (n,m,period,comma) + vim page action (e,y,b,f,d,u)",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "n"
+      },
+      "to": [
+        {
+          "key_code": "page_down"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "f",
+        "modifiers": {
+          "mandatory": ["control"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "page_down"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "m"
+      },
+      "to": [
+        {
+          "key_code": "page_up"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "b",
+        "modifiers": {
+          "mandatory": ["control"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "page_up"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "comma"
+      },
+      "to": [
+        {
+          "key_code": "end"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "period"
+      },
+      "to": [
+        {
+          "key_code": "home"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "d",
+        "modifiers": {
+          "mandatory": ["control"]
+        }
+      },
+      "to": [
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" },
+        { "key_code": "down_arrow" }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "u",
+        "modifiers": {
+          "mandatory": ["control"]
+        }
+      },
+      "to": [
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" },
+        { "key_code": "up_arrow" }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "e",
+        "modifiers": {
+          "mandatory": ["control"]
+        }
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "vertical_wheel": 32
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "y",
+        "modifiers": {
+          "mandatory": ["control"]
+        }
+      },
+      "to": [
+        {
+          "mouse_key": {
+            "vertical_wheel": -32
+          }
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

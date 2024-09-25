@@ -1,5 +1,5 @@
 {
-  "description": "Layer2-0. Long press '1' key turn on NUMBER mode, press 'esc' or 'ctrl+[' to turn off",
+  "description": "Layer2-0. Number mode will be enabled by '1' pressing in Vim mode.",
   "manipulators": [
     {
       "conditions": [
@@ -7,7 +7,11 @@
           "bundle_identifiers": [],
           "type": "frontmost_application_unless"
         },
-
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        },
         {
           "name": "num_mode",
           "type": "variable_unless",
@@ -23,13 +27,7 @@
         "to_delayed_action_delay_milliseconds": 500,
         "simultaneous_threshold_milliseconds": 500
       },
-      "to_if_alone": [
-        {
-          "halt": true,
-          "key_code": "1"
-        }
-      ],
-      "to_if_held_down": [
+      "to": [
         {
           "set_variable": {
             "name": "vim_mode",

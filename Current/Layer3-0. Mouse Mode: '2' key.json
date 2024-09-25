@@ -1,11 +1,16 @@
 {
-  "description": "Layer3-0. Mouse Mode: '2' key",
+  "description": "Layer3-0. Mouse mode will be enabled by pressing '2' key in Vim mode",
   "manipulators": [
     {
       "conditions": [
         {
           "bundle_identifiers": [],
           "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
         },
         {
           "name": "mouse_mode",
@@ -22,13 +27,19 @@
         "to_delayed_action_delay_milliseconds": 500,
         "simultaneous_threshold_milliseconds": 500
       },
-      "to_if_alone": [
+      "to": [
         {
-          "halt": true,
-          "key_code": "2"
-        }
-      ],
-      "to_if_held_down": [
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "set_variable": {
+            "name": "num_mode",
+            "value": 0
+          }
+        },
         {
           "set_variable": {
             "name": "mouse_mode",

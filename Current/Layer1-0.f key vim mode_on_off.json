@@ -18,7 +18,7 @@
       },
       "parameters": {
         "basic.to_if_alone_threshold_milliseconds": 1,
-        "basic.to_if_held_down_threshold_milliseconds": 180,
+        "basic.to_if_held_down_threshold_milliseconds": 120,
         "to_delayed_action_delay_milliseconds": 500,
         "simultaneous_threshold_milliseconds": 500
       },
@@ -29,6 +29,24 @@
         }
       ],
       "to_if_held_down": [
+        {
+          "set_notification_message": {
+            "id": "Number Mode Enabled",
+            "text": ""
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "Mouse Mode Enabled",
+            "text": ""
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": "NORMAL - Vim Mode Enabled"
+          }
+        },
         {
           "set_variable": {
             "name": "vim_mode",
@@ -42,28 +60,10 @@
           }
         },
         {
+          "halt": true,
           "set_variable": {
             "name": "mouse_mode",
             "value": 0
-          }
-        },
-        {
-          "halt": true,
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": "NORMAL - Vim Mode Enabled"
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "Number Mode Enabled",
-            "text": ""
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "Mouse Mode Enabled",
-            "text": ""
           }
         }
       ],

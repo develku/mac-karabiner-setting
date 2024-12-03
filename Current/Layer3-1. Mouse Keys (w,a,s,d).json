@@ -8,7 +8,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -33,7 +33,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -61,7 +61,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -86,7 +86,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -114,7 +114,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -139,7 +139,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -167,7 +167,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -192,7 +192,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }

@@ -13,7 +13,7 @@
           "value": 1
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_unless",
           "value": 1
         }
@@ -36,21 +36,8 @@
         },
         {
           "set_variable": {
-            "name": "num_mode",
-            "value": 0
-          }
-        },
-        {
-          "set_variable": {
-            "name": "mouse_mode",
+            "name": "num_mouse_mode",
             "value": 1
-          }
-        },
-        {
-          "halt": true,
-          "set_notification_message": {
-            "id": "Mouse Mode Enabled",
-            "text": "MOUSE - Vim Mode Enabled"
           }
         },
         {
@@ -61,7 +48,7 @@
         },
         {
           "set_notification_message": {
-            "id": "Number Mode Enabled",
+            "id": "Mouse & Num Mode Enabled",
             "text": ""
           }
         }
@@ -75,7 +62,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -86,7 +73,7 @@
       "to": [
         {
           "set_variable": {
-            "name": "mouse_mode",
+            "name": "num_mouse_mode",
             "value": 0
           }
         },
@@ -106,7 +93,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -118,7 +105,7 @@
       "to": [
         {
           "set_variable": {
-            "name": "mouse_mode",
+            "name": "num_mouse_mode",
             "value": 0
           }
         },

@@ -1,5 +1,5 @@
 {
-  "description": "Layer3-3. Mouse Click Actions (c,j:click, r,k:right click,l:mac word lookup q,e:vertical_wheel, z,x:horizontal_wheel)",
+  "description": "Layer3-2. Mouse Click Actions (left_command:click, f:right click, r:mac word lookup q,e:vertical_wheel, z,c:horizontal_wheel)",
   "manipulators": [
     {
       "conditions": [
@@ -8,13 +8,13 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
       ],
       "from": {
-        "key_code": "c"
+        "key_code": "left_command"
       },
       "to": [
         {
@@ -30,17 +30,17 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
       ],
       "from": {
-        "key_code": "j"
+        "key_code": "f"
       },
       "to": [
         {
-          "pointing_button": "button1"
+          "pointing_button": "button2"
         }
       ],
       "type": "basic"
@@ -52,57 +52,13 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
       ],
       "from": {
         "key_code": "r"
-      },
-      "to": [
-        {
-          "pointing_button": "button2"
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "mouse_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "k"
-      },
-      "to": [
-        {
-          "pointing_button": "button2"
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "mouse_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "l"
       },
       "to": [
         {
@@ -119,7 +75,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -143,7 +99,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -167,31 +123,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "w"
-      },
-      "to": [
-        {
-          "mouse_key": {
-            "horizontal_wheel": 45
-          }
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -215,13 +147,13 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "mouse_mode",
+          "name": "num_mouse_mode",
           "type": "variable_if",
           "value": 1
         }
       ],
       "from": {
-        "key_code": "x"
+        "key_code": "c"
       },
       "to": [
         {

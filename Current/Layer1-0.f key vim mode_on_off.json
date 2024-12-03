@@ -31,13 +31,7 @@
       "to_if_held_down": [
         {
           "set_notification_message": {
-            "id": "Number Mode Enabled",
-            "text": ""
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "Mouse Mode Enabled",
+            "id": "Mouse & Num Mode Enabled",
             "text": ""
           }
         },
@@ -54,15 +48,9 @@
           }
         },
         {
-          "set_variable": {
-            "name": "num_mode",
-            "value": 0
-          }
-        },
-        {
           "halt": true,
           "set_variable": {
-            "name": "mouse_mode",
+            "name": "num_mouse_mode",
             "value": 0
           }
         }

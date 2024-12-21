@@ -1,6 +1,64 @@
 {
-  "description": "Layer1-0. Long press 'tab' key turn on vim mode, press 'esc','ctrl+[',i,I to turn off",
+  "description": "left_command(short) - delete_or_backspace, left_command(long) - enable vim mode, tab(long) - enable vim mode, escape - disable vim mode, control + open_bracket - disable vim mode, i - disable vim mode",
   "manipulators": [
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_unless",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "left_command"
+      },
+      "parameters": {
+        "basic.to_if_alone_threshold_milliseconds": 1,
+        "basic.to_if_held_down_threshold_milliseconds": 120,
+        "to_delayed_action_delay_milliseconds": 500,
+        "simultaneous_threshold_milliseconds": 500
+      },
+      "to_if_alone": [
+        {
+          "halt": true,
+          "key_code": "delete_or_backspace"
+        }
+      ],
+      "to_if_held_down": [
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": "NORMAL - Vim Mode Enabled"
+          }
+        },
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 1
+          }
+        }
+      ],
+      "to_after_key_up": [
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
+          }
+        },
+        {
+          "halt": true,
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": ""
+          }
+        }
+      ],
+      "type": "basic"
+    },
     {
       "conditions": [
         {

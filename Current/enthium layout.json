@@ -17,7 +17,7 @@
                     "value": 1
                 }
             ],
-            "description": "Left shift in hyper one-shot: tap = lock QWERTY",
+            "description": "Left shift in Hyper: back to Enthium",
             "from": {
                 "key_code": "left_shift"
             },
@@ -35,13 +35,7 @@
                 },
                 {
                     "set_variable": {
-                        "name": "hyper_locked",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right_shift_tapped",
+                        "name": "qwerty_oneshot",
                         "value": 0
                     }
                 },
@@ -52,83 +46,9 @@
                     }
                 },
                 {
-                    "set_variable": {
-                        "name": "qwerty_oneshot",
-                        "value": 1
-                    }
-                },
-                {
                     "set_notification_message": {
                         "id": "layout_mode",
-                        "text": "QWERTY LOCKED"
-                    }
-                }
-            ],
-            "parameters": {
-                "basic.to_if_alone_timeout_milliseconds": 500
-            },
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "description": "Left shift in hyper locked: tap = lock QWERTY",
-            "from": {
-                "key_code": "left_shift"
-            },
-            "to": [
-                {
-                    "key_code": "left_shift"
-                }
-            ],
-            "to_if_alone": [
-                {
-                    "set_variable": {
-                        "name": "hyper_oneshot",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "hyper_locked",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right_shift_tapped",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "hyper_mode",
                         "text": ""
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "qwerty_oneshot",
-                        "value": 1
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "layout_mode",
-                        "text": "QWERTY LOCKED"
                     }
                 }
             ],
@@ -150,6 +70,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -183,6 +108,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -213,6 +143,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -245,6 +180,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -275,6 +215,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -307,6 +252,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -337,6 +287,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -369,6 +324,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -399,6 +359,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -431,6 +396,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -461,6 +431,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -493,6 +468,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -523,6 +503,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -555,6 +540,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -585,6 +575,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -617,6 +612,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -647,6 +647,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -679,6 +684,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -709,6 +719,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -741,6 +756,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -771,6 +791,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -803,6 +828,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -833,6 +863,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -865,6 +900,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -895,6 +935,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -927,6 +972,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -957,6 +1007,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -989,6 +1044,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1019,6 +1079,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1051,6 +1116,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1081,6 +1151,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1113,6 +1188,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1143,6 +1223,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1175,6 +1260,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1205,6 +1295,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1237,6 +1332,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1267,6 +1367,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1299,6 +1404,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1329,6 +1439,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1361,6 +1476,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1391,6 +1511,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1423,6 +1548,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1453,6 +1583,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1485,6 +1620,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1515,6 +1655,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1547,6 +1692,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1577,6 +1727,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1609,6 +1764,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1639,6 +1799,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1671,6 +1836,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1701,6 +1871,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1733,6 +1908,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1764,6 +1944,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1782,6 +1967,8 @@
             "type": "basic"
         },
         {
+            "type": "basic",
+            "description": "Right shift in Hyper: tap = switch to QWERTY",
             "conditions": [
                 {
                     "identifiers": [
@@ -1792,12 +1979,11 @@
                     "type": "device_if"
                 },
                 {
-                    "name": "qwerty_oneshot",
+                    "name": "hyper_oneshot",
                     "type": "variable_if",
                     "value": 1
                 }
             ],
-            "description": "Right shift in QWERTY mode: tap = one-shot hyper, hold 0.5s = exit to Enthium",
             "from": {
                 "key_code": "right_shift",
                 "modifiers": {
@@ -1806,28 +1992,63 @@
                     ]
                 }
             },
-            "to_if_alone": [
+            "to": [
                 {
                     "set_variable": {
-                        "name": "qwerty_oneshot",
+                        "name": "hyper_oneshot",
                         "value": 0
                     }
                 },
                 {
                     "set_notification_message": {
-                        "id": "layout_mode",
+                        "id": "hyper_mode",
                         "text": ""
                     }
                 },
                 {
                     "set_variable": {
-                        "name": "hyper_oneshot",
+                        "name": "qwerty_oneshot",
                         "value": 1
                     }
                 },
                 {
+                    "set_notification_message": {
+                        "id": "layout_mode",
+                        "text": "QWERTY"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "basic",
+            "description": "Right shift: tap = arm one-shot Hyper (keeps current layout)",
+            "conditions": [
+                {
+                    "identifiers": [
+                        {
+                            "is_built_in_keyboard": true
+                        }
+                    ],
+                    "type": "device_if"
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "right_shift",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
                     "set_variable": {
-                        "name": "right_shift_tapped",
+                        "name": "hyper_oneshot",
                         "value": 1
                     }
                 },
@@ -1837,55 +2058,7 @@
                         "text": "Hyper (one-shot)"
                     }
                 }
-            ],
-            "to_if_held_down": [
-                {
-                    "set_variable": {
-                        "name": "qwerty_oneshot",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "layout_mode",
-                        "text": ""
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "hyper_oneshot",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right_shift_tapped",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "hyper_mode",
-                        "text": ""
-                    }
-                }
-            ],
-            "to_delayed_action": {
-                "to_if_invoked": [
-                    {
-                        "set_variable": {
-                            "name": "right_shift_tapped",
-                            "value": 0
-                        }
-                    }
-                ]
-            },
-            "parameters": {
-                "basic.to_if_alone_timeout_milliseconds": 500,
-                "basic.to_if_held_down_threshold_milliseconds": 500,
-                "basic.to_delayed_action_delay_milliseconds": 500
-            },
-            "type": "basic"
+            ]
         },
         {
             "conditions": [
@@ -1900,6 +2073,11 @@
                 {
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
                     "value": 1
                 }
             ],
@@ -1932,6 +2110,11 @@
                     "name": "qwerty_oneshot",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "hyper_oneshot",
+                    "type": "variable_unless",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1960,260 +2143,6 @@
                     "type": "device_if"
                 },
                 {
-                    "name": "right_shift_tapped",
-                    "type": "variable_unless",
-                    "value": 1
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_unless",
-                    "value": 1
-                }
-            ],
-            "description": "Right shift: tap = one-shot hyper, hold 0.5s = enter QWERTY",
-            "from": {
-                "key_code": "right_shift",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to_if_alone": [
-                {
-                    "set_variable": {
-                        "name": "qwerty_oneshot",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "layout_mode",
-                        "text": ""
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "hyper_oneshot",
-                        "value": 1
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right_shift_tapped",
-                        "value": 1
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "hyper_mode",
-                        "text": "Hyper (one-shot)"
-                    }
-                }
-            ],
-            "to_if_held_down": [
-                {
-                    "set_variable": {
-                        "name": "hyper_oneshot",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "hyper_locked",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right_shift_tapped",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "hyper_mode",
-                        "text": ""
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "qwerty_oneshot",
-                        "value": 1
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "layout_mode",
-                        "text": "QWERTY LOCKED"
-                    }
-                }
-            ],
-            "to_delayed_action": {
-                "to_if_invoked": [
-                    {
-                        "set_variable": {
-                            "name": "right_shift_tapped",
-                            "value": 0
-                        }
-                    }
-                ]
-            },
-            "parameters": {
-                "basic.to_if_alone_timeout_milliseconds": 500,
-                "basic.to_if_held_down_threshold_milliseconds": 500,
-                "basic.to_delayed_action_delay_milliseconds": 500
-            },
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "right_shift_tapped",
-                    "type": "variable_if",
-                    "value": 1
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_unless",
-                    "value": 1
-                }
-            ],
-            "description": "Right shift: double-tap = lock hyper",
-            "from": {
-                "key_code": "right_shift",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "left_control",
-                    "modifiers": [
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "to_if_alone": [
-                {
-                    "set_variable": {
-                        "name": "qwerty_oneshot",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "layout_mode",
-                        "text": ""
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "hyper_locked",
-                        "value": 1
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "hyper_oneshot",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right_shift_tapped",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "hyper_mode",
-                        "text": "Hyper LOCKED"
-                    }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "description": "Right shift: tap to unlock hyper",
-            "from": {
-                "key_code": "right_shift",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "left_control",
-                    "modifiers": [
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "to_if_alone": [
-                {
-                    "set_variable": {
-                        "name": "hyper_locked",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right_shift_tapped",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_notification_message": {
-                        "id": "hyper_mode",
-                        "text": ""
-                    }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
                     "name": "hyper_oneshot",
                     "type": "variable_if",
                     "value": 1
@@ -2229,15 +2158,6 @@
             },
             "to": [
                 {
-                    "key_code": "escape",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                },
-                {
                     "set_variable": {
                         "name": "hyper_oneshot",
                         "value": 0
@@ -2245,7 +2165,7 @@
                 },
                 {
                     "set_variable": {
-                        "name": "right_shift_tapped",
+                        "name": "qwerty_oneshot",
                         "value": 0
                     }
                 },
@@ -2254,9 +2174,16 @@
                         "id": "hyper_mode",
                         "text": ""
                     }
+                },
+                {
+                    "set_notification_message": {
+                        "id": "layout_mode",
+                        "text": ""
+                    }
                 }
             ],
-            "type": "basic"
+            "type": "basic",
+            "description": "Backtick in Hyper: back to Enthium"
         },
         {
             "conditions": [
@@ -5224,2041 +5151,6 @@
                         "id": "hyper_mode",
                         "text": ""
                     }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "grave_accent_and_tilde",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "escape",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "escape",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "caps_lock",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "hyphen",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "open_bracket",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "equal_sign",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "close_bracket",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "q",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "q",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "w",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "y",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "e",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "o",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "r",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "u",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "t",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "equal_sign",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "y",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "x",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "u",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "l",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "i",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "d",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "o",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "p",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "p",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "z",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "open_bracket",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "close_bracket",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "left_control",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "backslash",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "backslash",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "delete_or_backspace",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "grave_accent_and_tilde",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "caps_lock",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "b",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "a",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "c",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "s",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "i",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "d",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "a",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "f",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "e",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "g",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "hyphen",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "h",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "k",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "j",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "h",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "k",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "t",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "l",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "n",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "semicolon",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "s",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "quote",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "w",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "z",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "quote",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "x",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "comma",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "c",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "period",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "v",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "semicolon",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "b",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "slash",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "n",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "j",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "m",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "m",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "comma",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "g",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "period",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "f",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "slash",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "v",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "right_command",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "r",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "right_option",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "right_command",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "1",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "1",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "2",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "2",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "3",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "3",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "4",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "4",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "5",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "5",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "6",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "6",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "7",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "7",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "8",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "8",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "9",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "9",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "0",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "0",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "tab",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "tab",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "return_or_enter",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "return_or_enter",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "identifiers": [
-                        {
-                            "is_built_in_keyboard": true
-                        }
-                    ],
-                    "type": "device_if"
-                },
-                {
-                    "name": "hyper_locked",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "spacebar",
-                "modifiers": {
-                    "optional": [
-                        "any"
-                    ]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "spacebar",
-                    "modifiers": [
-                        "control",
-                        "option",
-                        "shift",
-                        "command"
-                    ]
                 }
             ],
             "type": "basic"

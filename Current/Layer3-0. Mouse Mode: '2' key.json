@@ -1,5 +1,5 @@
 {
-  "description": "Layer3-0. Mouse mode will be enabled by pressing '2' key in Vim mode",
+  "description": "Layer3-0. Mouse & Number Mode: '2' key",
   "manipulators": [
     {
       "conditions": [
@@ -14,8 +14,8 @@
         },
         {
           "name": "num_mouse_mode",
-          "type": "variable_unless",
-          "value": 1
+          "type": "variable_if",
+          "value": 0
         }
       ],
       "from": {
@@ -48,8 +48,8 @@
         },
         {
           "set_notification_message": {
-            "id": "Mouse & Num Mode Enabled",
-            "text": ""
+            "id": "mouse_number_mode_enabled",
+            "text": "MOUSE & NUMBER MODE Enabled"
           }
         }
       ],
@@ -79,7 +79,7 @@
         },
         {
           "set_notification_message": {
-            "id": "Mouse Mode Enabled",
+            "id": "mouse_number_mode_enabled",
             "text": ""
           }
         }
@@ -111,7 +111,7 @@
         },
         {
           "set_notification_message": {
-            "id": "Mouse Mode Enabled",
+            "id": "mouse_number_mode_enabled",
             "text": ""
           }
         }

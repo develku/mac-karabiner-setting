@@ -1,5 +1,5 @@
 {
-  "description": "Layer2-0. Number mode will be enabled by '1' pressing in Vim mode.",
+  "description": "Layer2-0. turn on vim mode with 1 key",
   "manipulators": [
     {
       "conditions": [
@@ -10,11 +10,11 @@
         {
           "name": "vim_mode",
           "type": "variable_if",
-          "value": 1
+          "value": 0
         },
         {
           "name": "num_mouse_mode",
-          "type": "variable_unless",
+          "type": "variable_if",
           "value": 1
         }
       ],
@@ -24,27 +24,58 @@
       "parameters": {
         "basic.to_if_alone_threshold_milliseconds": 1,
         "basic.to_if_held_down_threshold_milliseconds": 180,
-        "to_delayed_action_delay_milliseconds": 500,
+        "to_delayed_action_delay_milliseconds": 400,
         "simultaneous_threshold_milliseconds": 500
       },
       "to": [
         {
           "set_variable": {
             "name": "vim_mode",
-            "value": 0
+            "value": 1
           }
         },
         {
           "set_variable": {
             "name": "num_mouse_mode",
-            "value": 1
+            "value": 0
           }
         },
         {
           "halt": true,
           "set_notification_message": {
-            "id": "Mouse & Num Mode Enabled",
-            "text": "Num Mouse Mode Enabled"
+            "id": "mouse_number_mode_enabled",
+            "text": ""
+          }
+        },
+        {
+          "set_notification_message": {
+            "id": "vim_mode_plus_enabled",
+            "text": "NORMAL - Vim Mode Enabled"
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "bundle_identifiers": [],
+          "type": "frontmost_application_unless"
+        },
+        {
+          "name": "vim_mode",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "escape"
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "vim_mode",
+            "value": 0
           }
         },
         {
@@ -63,38 +94,7 @@
           "type": "frontmost_application_unless"
         },
         {
-          "name": "num_mouse_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "escape"
-      },
-      "to": [
-        {
-          "set_variable": {
-            "name": "num_mouse_mode",
-            "value": 0
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "Mouse & Num Mode Enabled",
-            "text": ""
-          }
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "num_mouse_mode",
+          "name": "vim_mode",
           "type": "variable_if",
           "value": 1
         }
@@ -106,13 +106,13 @@
       "to": [
         {
           "set_variable": {
-            "name": "num_mouse_mode",
+            "name": "vim_mode",
             "value": 0
           }
         },
         {
           "set_notification_message": {
-            "id": "Mouse & Num Mode Enabled",
+            "id": "vim_mode_plus_enabled",
             "text": ""
           }
         }

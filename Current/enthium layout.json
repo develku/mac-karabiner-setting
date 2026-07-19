@@ -19,14 +19,14 @@
             ],
             "description": "Left shift in Hyper: back to Enthium",
             "from": {
-                "key_code": "left_shift"
+                "key_code": "left_shift",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
             },
             "to": [
-                {
-                    "key_code": "left_shift"
-                }
-            ],
-            "to_if_alone": [
                 {
                     "set_variable": {
                         "name": "hyper_oneshot",
@@ -52,9 +52,6 @@
                     }
                 }
             ],
-            "parameters": {
-                "basic.to_if_alone_timeout_milliseconds": 500
-            },
             "type": "basic"
         },
         {

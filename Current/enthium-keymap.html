@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Enthium Layout - MacBook Keyboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    color: #fff;
+  }
+  h1 { font-size: 22px; font-weight: 500; margin-bottom: 6px; letter-spacing: 0.5px; }
+  .subtitle { font-size: 13px; color: #888; margin-bottom: 36px; }
+
+  .macbook-base {
+    background: linear-gradient(145deg, #c4c4c4 0%, #d6d6d6 30%, #b8b8b8 100%);
+    border-radius: 18px;
+    padding: 24px 28px 28px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.4);
+  }
+
+  .row { display: flex; gap: 3px; margin-bottom: 3px; justify-content: center; }
+
+  .key {
+    width: 48px;
+    height: 38px;
+    background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%);
+    border: 1px solid #1a1a1a;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #e0e0e0;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  .key .output { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.2; }
+  .key .shifted { font-size: 9px; color: #888; line-height: 1; }
+  .key .physical { font-size: 7px; color: #666; position: absolute; bottom: 2px; right: 4px; }
+
+  /* Color accents */
+  .c-letter   { border-bottom: 2px solid #5c7cfa; }
+  .c-vowel    { border-bottom: 2px solid #20c997; }
+  .c-home     { border-bottom: 2px solid #ffd43b; }
+  .c-special  { border-bottom: 2px solid #ff6b6b; }
+  .c-hyper    { border-bottom: 2px solid #cc5de8; }
+  .c-punct    { border-bottom: 2px solid #ff922b; }
+  .c-ctrl     { border-bottom: 2px solid #4dabf7; }
+
+  /* Key widths */
+  .w-esc  { width: 62px; }
+  .w-del  { width: 72px; }
+  .w-tab  { width: 68px; }
+  .w-bsl  { width: 58px; }
+  .w-caps { width: 78px; }
+  .w-ret  { width: 82px; }
+  .w-lsh  { width: 100px; }
+  .w-rsh  { width: 100px; }
+  .w-fn   { width: 42px; height: 30px; font-size: 10px; }
+  .w-ctrl { width: 42px; height: 30px; font-size: 10px; }
+  .w-opt  { width: 48px; height: 30px; font-size: 10px; }
+  .w-cmd  { width: 58px; height: 30px; font-size: 10px; }
+  .w-spc  { width: 260px; height: 30px; }
+  .w-arr  { width: 42px; height: 30px; font-size: 10px; }
+
+  .fn-row .key { width: 42px; height: 24px; font-size: 9px; }
+  .fn-row .key .output { font-size: 9px; }
+
+  .legend {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+    font-size: 11px;
+    color: #999;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-line { width: 20px; height: 3px; border-radius: 2px; }
+
+  .note {
+    margin-top: 16px;
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+
+  /* Arrow key cluster */
+  .arrow-group { display: flex; flex-direction: column; gap: 1px; }
+  .arrow-top { display: flex; justify-content: center; }
+  .arrow-bottom { display: flex; gap: 1px; }
+  .arrow-group .key { width: 42px; height: 14px; font-size: 9px; }
+</style>
+</head>
+<body>
+
+<h1>Enthium Layout</h1>
+<p class="subtitle">MacBook Built-in Keyboard &middot; Updated 2026-03-26</p>
+
+<div class="macbook-base">
+
+  <!-- Function Row -->
+  <div class="row fn-row">
+    <div class="key c-special" style="width:62px"><span class="output">Caps Lock</span></div>
+    <div class="key"><span class="output">F1</span></div>
+    <div class="key"><span class="output">F2</span></div>
+    <div class="key"><span class="output">F3</span></div>
+    <div class="key"><span class="output">F4</span></div>
+    <div class="key"><span class="output">F5</span></div>
+    <div class="key"><span class="output">F6</span></div>
+    <div class="key"><span class="output">F7</span></div>
+    <div class="key"><span class="output">F8</span></div>
+    <div class="key"><span class="output">F9</span></div>
+    <div class="key"><span class="output">F10</span></div>
+    <div class="key"><span class="output">F11</span></div>
+    <div class="key"><span class="output">F12</span></div>
+    <div class="key" style="width:62px"><span class="output">Touch ID</span></div>
+  </div>
+
+  <!-- Number Row -->
+  <div class="row">
+    <div class="key w-esc c-special">
+      <span class="output">Esc</span>
+      <span class="physical">` ~</span>
+    </div>
+    <div class="key"><span class="shifted">!</span><span class="output">1</span></div>
+    <div class="key"><span class="shifted">@</span><span class="output">2</span></div>
+    <div class="key"><span class="shifted">#</span><span class="output">3</span></div>
+    <div class="key"><span class="shifted">$</span><span class="output">4</span></div>
+    <div class="key"><span class="shifted">%</span><span class="output">5</span></div>
+    <div class="key"><span class="shifted">^</span><span class="output">6</span></div>
+    <div class="key"><span class="shifted">&amp;</span><span class="output">7</span></div>
+    <div class="key"><span class="shifted">*</span><span class="output">8</span></div>
+    <div class="key"><span class="shifted">(</span><span class="output">9</span></div>
+    <div class="key"><span class="shifted">)</span><span class="output">0</span></div>
+    <div class="key c-punct">
+      <span class="shifted">{</span>
+      <span class="output">[</span>
+      <span class="physical">-</span>
+    </div>
+    <div class="key c-punct">
+      <span class="shifted">}</span>
+      <span class="output">]</span>
+      <span class="physical">=</span>
+    </div>
+    <div class="key w-del c-special">
+      <span class="output">` ~</span>
+      <span class="physical">delete</span>
+    </div>
+  </div>
+
+  <!-- Top Letter Row -->
+  <div class="row">
+    <div class="key w-tab"><span class="output">Tab</span></div>
+    <div class="key"><span class="output">Q</span></div>
+    <div class="key c-letter"><span class="output">Y</span><span class="physical">w</span></div>
+    <div class="key c-vowel"><span class="output">O</span><span class="physical">e</span></div>
+    <div class="key c-vowel"><span class="output">U</span><span class="physical">r</span></div>
+    <div class="key c-punct">
+      <span class="shifted">+</span>
+      <span class="output">=</span>
+      <span class="physical">t</span>
+    </div>
+    <div class="key c-special">
+      <span class="output">Bksp</span>
+      <span class="physical">y</span>
+    </div>
+    <div class="key c-letter"><span class="output">L</span><span class="physical">u</span></div>
+    <div class="key c-letter"><span class="output">D</span><span class="physical">i</span></div>
+    <div class="key c-letter"><span class="output">P</span><span class="physical">o</span></div>
+    <div class="key c-letter"><span class="output">Z</span><span class="physical">p</span></div>
+    <div class="key c-letter"><span class="output">X</span><span class="physical">[</span></div>
+    <div class="key c-ctrl"><span class="output">Ctrl</span><span class="physical">]</span></div>
+    <div class="key w-bsl">
+      <span class="shifted">|</span>
+      <span class="output">\</span>
+    </div>
+  </div>
+
+  <!-- Home Row -->
+  <div class="row">
+    <div class="key w-caps c-special"><span class="output">B</span><span class="physical">caps</span></div>
+    <div class="key c-home"><span class="output">C</span><span class="physical">a</span></div>
+    <div class="key c-home" style="border-bottom-color:#20c997"><span class="output">I</span><span class="physical">s</span></div>
+    <div class="key c-home" style="border-bottom-color:#20c997"><span class="output">A</span><span class="physical">d</span></div>
+    <div class="key c-home" style="border-bottom-color:#20c997"><span class="output">E</span><span class="physical">f</span></div>
+    <div class="key c-home" style="border-bottom-color:#ff922b">
+      <span class="shifted">_</span>
+      <span class="output">-</span>
+      <span class="physical">g</span>
+    </div>
+    <div class="key c-home"><span class="output">K</span><span class="physical">h</span></div>
+    <div class="key c-home"><span class="output">H</span><span class="physical">j</span></div>
+    <div class="key c-home"><span class="output">T</span><span class="physical">k</span></div>
+    <div class="key c-home"><span class="output">N</span><span class="physical">l</span></div>
+    <div class="key c-home"><span class="output">S</span><span class="physical">;</span></div>
+    <div class="key c-home"><span class="output">W</span><span class="physical">'</span></div>
+    <div class="key w-ret"><span class="output">Return</span></div>
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="row">
+    <div class="key w-lsh"><span class="output">Shift</span></div>
+    <div class="key c-punct">
+      <span class="shifted">"</span>
+      <span class="output">'</span>
+      <span class="physical">z</span>
+    </div>
+    <div class="key c-punct">
+      <span class="shifted">&lt;</span>
+      <span class="output">,</span>
+      <span class="physical">x</span>
+    </div>
+    <div class="key c-punct">
+      <span class="shifted">&gt;</span>
+      <span class="output">.</span>
+      <span class="physical">c</span>
+    </div>
+    <div class="key c-punct">
+      <span class="shifted">:</span>
+      <span class="output">;</span>
+      <span class="physical">v</span>
+    </div>
+    <div class="key c-punct">
+      <span class="shifted">?</span>
+      <span class="output">/</span>
+      <span class="physical">b</span>
+    </div>
+    <div class="key c-letter"><span class="output">J</span><span class="physical">n</span></div>
+    <div class="key"><span class="output">M</span></div>
+    <div class="key c-letter"><span class="output">G</span><span class="physical">,</span></div>
+    <div class="key c-letter"><span class="output">F</span><span class="physical">.</span></div>
+    <div class="key c-letter"><span class="output">V</span><span class="physical">/</span></div>
+    <div class="key w-rsh c-hyper"><span class="output">Hyper</span></div>
+  </div>
+
+  <!-- Modifier Row -->
+  <div class="row">
+    <div class="key w-fn"><span class="output">fn</span></div>
+    <div class="key w-ctrl"><span class="output">&#x2303;</span></div>
+    <div class="key w-opt"><span class="output">&#x2325;</span></div>
+    <div class="key w-cmd"><span class="output">&#x2318;</span></div>
+    <div class="key w-spc"><span class="output">Space</span></div>
+    <div class="key w-cmd c-special"><span class="output">R</span><span class="physical">&#x2318;</span></div>
+    <div class="key w-opt c-special"><span class="output">&#x2318;</span><span class="physical">&#x2325;</span></div>
+    <div class="key w-arr"><span class="output">&larr;</span></div>
+    <div class="arrow-group">
+      <div class="arrow-top"><div class="key" style="width:42px;height:14px;font-size:9px"><span class="output">&uarr;</span></div></div>
+      <div class="arrow-bottom"><div class="key" style="width:42px;height:14px;font-size:9px"><span class="output">&darr;</span></div></div>
+    </div>
+    <div class="key w-arr"><span class="output">&rarr;</span></div>
+  </div>
+
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-line" style="background:#ffd43b"></div> Home row</div>
+  <div class="legend-item"><div class="legend-line" style="background:#20c997"></div> Vowel</div>
+  <div class="legend-item"><div class="legend-line" style="background:#5c7cfa"></div> Letter</div>
+  <div class="legend-item"><div class="legend-line" style="background:#ff922b"></div> Punctuation</div>
+  <div class="legend-item"><div class="legend-line" style="background:#ff6b6b"></div> Special</div>
+  <div class="legend-item"><div class="legend-line" style="background:#cc5de8"></div> Hyper</div>
+  <div class="legend-item"><div class="legend-line" style="background:#4dabf7"></div> Ctrl</div>
+</div>
+
+<div class="note">
+  Large labels = Enthium output &middot; Small bottom-right = physical QWERTY key<br>
+  Built-in keyboard only &middot; External keyboards unaffected
+</div>
+
+</body>
+</html>

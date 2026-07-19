@@ -15,3 +15,6 @@
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# Claude Code local settings
+.claude/

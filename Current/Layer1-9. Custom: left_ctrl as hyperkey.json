@@ -1,0 +1,18 @@
+{
+	"description": "Layer1-9: left_control as Hyper (ctrl+option+shift+command)",
+	"manipulators": [
+		{
+			"type": "basic",
+			"from": {
+				"key_code": "left_control",
+				"modifiers": { "optional": ["any"] }
+			},
+			"to": [
+				{
+					"key_code": "left_control",
+					"modifiers": ["left_option", "left_shift", "left_command"]
+				}
+			]
+		}
+	]
+}

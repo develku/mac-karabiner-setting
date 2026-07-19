@@ -1,213 +1,273 @@
 {
-  "description": "left_command(short) - delete_or_backspace, left_command(long) - enable vim mode, tab(long) - enable vim mode, escape - disable vim mode, control + open_bracket - disable vim mode, i - disable vim mode",
-  "manipulators": [
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_unless",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "left_command"
-      },
-      "parameters": {
-        "basic.to_if_alone_threshold_milliseconds": 1,
-        "basic.to_if_held_down_threshold_milliseconds": 120,
-        "to_delayed_action_delay_milliseconds": 500,
-        "simultaneous_threshold_milliseconds": 500
-      },
-      "to_if_alone": [
-        {
-          "halt": true,
-          "key_code": "delete_or_backspace"
-        }
-      ],
-      "to_if_held_down": [
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": "NORMAL - Vim Mode Enabled"
-          }
-        },
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 1
-          }
-        }
-      ],
-      "to_after_key_up": [
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 0
-          }
-        },
-        {
-          "halt": true,
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": ""
-          }
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_unless",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "tab"
-      },
-      "parameters": {
-        "basic.to_if_alone_threshold_milliseconds": 1,
-        "basic.to_if_held_down_threshold_milliseconds": 120,
-        "to_delayed_action_delay_milliseconds": 500,
-        "simultaneous_threshold_milliseconds": 500
-      },
-      "to_if_alone": [
-        {
-          "halt": true,
-          "key_code": "tab"
-        }
-      ],
-      "to_if_held_down": [
-        {
-          "set_notification_message": {
-            "id": "Mouse & Num Mode Enabled",
-            "text": ""
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": "NORMAL - Vim Mode Enabled"
-          }
-        },
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 1
-          }
-        },
-        {
-          "halt": true,
-          "set_variable": {
-            "name": "num_mouse_mode",
-            "value": 0
-          }
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "escape"
-      },
-      "to": [
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 0
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": ""
-          }
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "open_bracket",
-        "modifiers": { "mandatory": ["control"] }
-      },
-      "to": [
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 0
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": ""
-          }
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "bundle_identifiers": [],
-          "type": "frontmost_application_unless"
-        },
-        {
-          "name": "vim_mode",
-          "type": "variable_if",
-          "value": 1
-        }
-      ],
-      "from": {
-        "key_code": "i"
-      },
-      "to": [
-        {
-          "set_variable": {
-            "name": "vim_mode",
-            "value": 0
-          }
-        },
-        {
-          "set_notification_message": {
-            "id": "vim_mode_plus_enabled",
-            "text": ""
-          }
-        }
-      ],
-      "type": "basic"
-    }
-  ]
+	"description": "command once as normal, command twice to enable vim mode, and esc & control + [ to disable vim mode",
+	"manipulators": [
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [],
+					"type": "frontmost_application_unless"
+				},
+				{
+					"name": "vim_mode",
+					"type": "variable_unless",
+					"value": 1
+				},
+				{
+					"name": "command_pressed",
+					"type": "variable_unless",
+					"value": 1
+				}
+			],
+			"description": "First tap of left_command - set flag and act as normal command",
+			"from": {
+				"key_code": "left_command",
+				"modifiers": { "optional": ["any"] }
+			},
+			"parameters": {
+				"basic.to_if_alone_threshold_milliseconds": 1,
+				"basic.to_delayed_action_delay_milliseconds": 800,
+				"basic.to_if_held_down_threshold_milliseconds": 500
+			},
+			"to": [{ "key_code": "left_command" }],
+			"to_if_alone": [
+				{
+					"set_variable": {
+						"name": "command_pressed",
+						"value": 1
+					}
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"name": "command_pressed",
+					"type": "variable_if",
+					"value": 1
+				},
+				{
+					"name": "vim_mode",
+					"type": "variable_unless",
+					"value": 1
+				}
+			],
+			"description": "Second tap of left_command - enable vim mode",
+			"from": {
+				"key_code": "left_command",
+				"modifiers": { "optional": ["any"] }
+			},
+			"to": [
+				{
+					"set_variable": {
+						"name": "vim_mode",
+						"value": 1
+					}
+				},
+				{
+					"set_variable": {
+						"name": "command_pressed",
+						"value": 0
+					}
+				},
+				{
+					"set_notification_message": {
+						"id": "vim_mode_plus_enabled",
+						"text": "NORMAL - Vim Mode Enabled"
+					}
+				}
+			],
+			"to_after_key_up": [
+				{
+					"set_variable": {
+						"name": "vim_mode",
+						"value": 0
+					}
+				},
+				{
+					"set_notification_message": {
+						"id": "vim_mode_plus_enabled",
+						"text": ""
+					}
+				}
+			],
+			"to_if_held_down": [
+				{
+					"set_variable": {
+						"name": "vim_mode",
+						"value": 1
+					}
+				},
+				{
+					"set_variable": {
+						"name": "command_pressed",
+						"value": 0
+					}
+				},
+				{
+					"set_notification_message": {
+						"id": "vim_mode_plus_enabled",
+						"text": "NORMAL - Vim Mode Enabled"
+					}
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [],
+					"type": "frontmost_application_unless"
+				},
+				{
+					"name": "vim_mode",
+					"type": "variable_unless",
+					"value": 1
+				}
+			],
+			"from": { "key_code": "tab" },
+			"parameters": {
+				"basic.to_if_alone_threshold_milliseconds": 1,
+				"basic.to_if_held_down_threshold_milliseconds": 120,
+				"simultaneous_threshold_milliseconds": 500,
+				"to_delayed_action_delay_milliseconds": 500
+			},
+			"to_if_alone": [
+				{
+					"halt": true,
+					"key_code": "tab"
+				}
+			],
+			"to_if_held_down": [
+				{
+					"set_notification_message": {
+						"id": "Mouse & Num Mode Enabled",
+						"text": ""
+					}
+				},
+				{
+					"set_notification_message": {
+						"id": "vim_mode_plus_enabled",
+						"text": "NORMAL - Vim Mode Enabled"
+					}
+				},
+				{
+					"set_variable": {
+						"name": "vim_mode",
+						"value": 1
+					}
+				},
+				{
+					"halt": true,
+					"set_variable": {
+						"name": "num_mouse_mode",
+						"value": 0
+					}
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [],
+					"type": "frontmost_application_unless"
+				},
+				{
+					"name": "vim_mode",
+					"type": "variable_if",
+					"value": 1
+				}
+			],
+			"from": { "key_code": "escape" },
+			"to": [
+				{
+					"set_variable": {
+						"name": "vim_mode",
+						"value": 0
+					}
+				},
+				{
+					"set_variable": {
+						"name": "command_pressed",
+						"value": 0
+					}
+				},
+				{
+					"set_notification_message": {
+						"id": "vim_mode_plus_enabled",
+						"text": ""
+					}
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [],
+					"type": "frontmost_application_unless"
+				},
+				{
+					"name": "vim_mode",
+					"type": "variable_if",
+					"value": 1
+				}
+			],
+			"from": {
+				"key_code": "open_bracket",
+				"modifiers": { "mandatory": ["control"] }
+			},
+			"to": [
+				{
+					"set_variable": {
+						"name": "vim_mode",
+						"value": 0
+					}
+				},
+				{
+					"set_variable": {
+						"name": "command_pressed",
+						"value": 0
+					}
+				},
+				{
+					"set_notification_message": {
+						"id": "vim_mode_plus_enabled",
+						"text": ""
+					}
+				}
+			],
+			"type": "basic"
+		},
+		{
+			"conditions": [
+				{
+					"bundle_identifiers": [],
+					"type": "frontmost_application_unless"
+				},
+				{
+					"name": "vim_mode",
+					"type": "variable_if",
+					"value": 1
+				}
+			],
+			"from": { "key_code": "i" },
+			"to": [
+				{
+					"set_variable": {
+						"name": "vim_mode",
+						"value": 0
+					}
+				},
+				{
+					"set_notification_message": {
+						"id": "vim_mode_plus_enabled",
+						"text": ""
+					}
+				}
+			],
+			"type": "basic"
+		}
+	]
 }

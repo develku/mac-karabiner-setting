@@ -28,6 +28,11 @@
             },
             "to": [
                 {
+                    "select_input_source": {
+                        "input_source_id": "com.apple.keylayout.US"
+                    }
+                },
+                {
                     "set_variable": {
                         "name": "hyper_oneshot",
                         "value": 0
@@ -2013,6 +2018,11 @@
                         "id": "layout_mode",
                         "text": "QWERTY"
                     }
+                },
+                {
+                    "select_input_source": {
+                        "input_mode_id": "com.apple.inputmethod.Korean.2SetKorean"
+                    }
                 }
             ]
         },
@@ -2154,6 +2164,11 @@
                 }
             },
             "to": [
+                {
+                    "select_input_source": {
+                        "input_source_id": "com.apple.keylayout.US"
+                    }
+                },
                 {
                     "set_variable": {
                         "name": "hyper_oneshot",

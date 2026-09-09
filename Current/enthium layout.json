@@ -559,7 +559,7 @@
             },
             "to": [
                 {
-                    "key_code": "open_bracket"
+                    "key_code": "delete_or_backspace"
                 }
             ],
             "type": "basic"
@@ -1459,7 +1459,7 @@
             },
             "to": [
                 {
-                    "key_code": "delete_or_backspace"
+                    "key_code": "open_bracket"
                 }
             ],
             "type": "basic"
@@ -2018,13 +2018,20 @@
                         "id": "layout_mode",
                         "text": "QWERTY"
                     }
-                },
-                {
-                    "select_input_source": {
-                        "input_mode_id": "com.apple.inputmethod.Korean.2SetKorean"
-                    }
                 }
-            ]
+            ],
+            "to_delayed_action": {
+                "to_if_invoked": [
+                    {
+                        "select_input_source": {
+                            "input_mode_id": "com.apple.inputmethod.Korean.2SetKorean"
+                        }
+                    }
+                ]
+            },
+            "parameters": {
+                "basic.to_delayed_action_delay_milliseconds": 200
+            }
         },
         {
             "type": "basic",
